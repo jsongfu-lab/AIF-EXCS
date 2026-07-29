@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#d97706">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="AIF 题库">
+    <meta name="description" content="AWS Certified AI Practitioner AIF-C01 离线练习题库">
+    <title>AIF-C01 练习台</title>
+    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="apple-touch-icon" href="./icons/icon-192.png">
+    <link rel="icon" href="./icons/icon-192.png">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#app">跳到主要内容</a>
+    <header class="masthead">
+      <button class="brand" type="button" data-action="home" aria-label="返回首页">
+        <span class="brand-mark" aria-hidden="true">AIF</span>
+        <span>
+          <strong>AIF-C01 练习台</strong>
+          <small>AI Practitioner · 420 道可交互题</small>
+        </span>
+      </button>
+      <div class="header-actions">
+        <span id="network-state" class="network-state" aria-live="polite">检查网络…</span>
+        <button id="install-button" class="button button-quiet" type="button" hidden>安装</button>
+      </div>
+    </header>
+
+    <main id="app" tabindex="-1" aria-live="polite">
+      <noscript>此题库需要启用 JavaScript。</noscript>
+      <section class="loading" aria-label="正在载入题库">
+        <p>正在整理题目…</p>
+      </section>
+    </main>
+
+    <nav class="dock" aria-label="主要功能">
+      <button type="button" data-action="home"><span aria-hidden="true">⌂</span>首页</button>
+      <button type="button" data-action="browse"><span aria-hidden="true">§</span>浏览</button>
+      <button type="button" data-action="practice"><span aria-hidden="true">✓</span>练习</button>
+      <button type="button" data-action="quiz"><span aria-hidden="true">№</span>测试</button>
+      <button type="button" data-action="wrong"><span aria-hidden="true">!</span>错题</button>
+    </nav>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+    <script src="./app.js" defer></script>
+  </body>
+</html>

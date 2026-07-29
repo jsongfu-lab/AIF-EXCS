@@ -1,0 +1,258 @@
+[
+  {
+    "id": 114,
+    "type": "hotspot",
+    "prompt": "A company wants to build an ML application. Select and order the correct steps from the following list to develop a well-architected ML workload. Each step should be selected one time.",
+    "explanation": "The typical sequence of steps in building an ML application involves: 1. Defining the business goal and framing the ML problem - This step involves understanding the business need and determining how ML can address it. 2. Developing the model - This involves selecting the appropriate algorithm, training the model, and evaluating it. 3. Deploying the model - Once the model is trained, it is deployed to production to serve predictions. 4. Monitoring the model - After deployment, the model is monitored to ensure it performs well over time and to detect any issues like model drift.",
+    "sourcePage": 43,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 125,
+    "type": "hotspot",
+    "prompt": "A company has developed a large language model (LLM) and wants to make the LLM available to multiple internal teams. The company needs to select the appropriate inference mode for each team. Select the correct inference mode from the following list for each use case. Each inference mode should be selected one or more times.",
+    "explanation": "The company’s chatbot needs predictions from the LLM to understand users’ intent with minimal latency - Real-time inference This scenario requires Real-time inference, as chatbots typically need immediate responses with low latency to provide an interactive user experience. A data processing job needs to query the LLM to process gigabytes of text files on weekends - Batch transform This use case is best suited for Batch transform. Since the data processing job involves handling large amounts of data, and it is scheduled for weekends, batch processing can handle these large volumes efficiently. The company’s engineering team needs to create an API that can process small pieces of text content and provide low-latency predictions - Real-time inference Real-time inference is the correct choice here, as the API needs to process text quickly and provide immediate responses, making real-time inference appropriate.",
+    "sourcePage": 48,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 135,
+    "type": "hotspot",
+    "prompt": "A company wants to develop ML applications to improve business operations and efficiency. Select the correct ML paradigm from the following list for each use case. Each ML paradigm should be selected one or more times.",
+    "explanation": "Binary classification: Supervised learning Binary classification involves predicting one of two possible outcomes, requiring labeled training data. Multi-class classification: Supervised learning Multi-class classification extends binary classification to predict one of several classes, also requiring labeled data. K-means clustering: Unsupervised learning K-means clustering is used to group data points into clusters without requiring labeled data. Dimensionality reduction: Unsupervised learning Dimensionality reduction techniques, like PCA, reduce the number of features in the dataset without needing labeled data.",
+    "sourcePage": 53,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 143,
+    "type": "hotspot",
+    "prompt": "A company is training its employees on how to structure prompts for foundation models. Select the correct prompt engineering technique from the following list for each prompt template. Each prompt engineering technique should be selected one time.",
+    "explanation": "\"Classify the following text as either sports, politics, or entertainment: [input text].\" Correct Answer: Zero-shot learning Zero-shot learning involves providing the model with a task and no prior examples, relying entirely on the model's pre-trained knowledge to perform the classification. \"A [image 1], [image 2], and [image 3] are examples of [target class]. Classify the following image as [target class].\" Correct Answer: Few-shot learning Few-shot learning provides the model with a few examples (image 1, image 2, and image 3) before asking it to classify a new instance, helping it generalize to the task with minimal examples. \"[Question.] [Instructions to follow.] Think step by step and walk me through your thinking.\" Correct Answer: Chain-of-thought reasoning Chain-of-thought reasoning encourages the model to break down its reasoning process step by step, enhancing its ability to solve complex tasks logically.",
+    "sourcePage": 57,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 144,
+    "type": "hotspot",
+    "prompt": "A company is using a generative AI model to develop a digital assistant. The model’s responses occasionally include undesirable and potentially harmful content. Select the correct Amazon Bedrock filter policy from the following list for each mitigation action. Each filter policy should be selected one time.",
+    "explanation": "Block input prompts or model responses that contain harmful content such as hate, insults, violence, or misconduct - Content filters Avoid subjects related to illegal investment advice or legal advice - Denied topics Detect and block specific offensive terms - Word filters Detect and filter out information in the model's responses that is not grounded in the provided source information - Contextual grounding check",
+    "sourcePage": 58,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 155,
+    "type": "hotspot",
+    "prompt": "A company wants more customized responses to its generative AI models’ prompts. Select the correct customization methodology from the following list for each use case. Each use case should be selected one time.",
+    "explanation": "The models must be taught a new domain-specific task - Model fine-tuning Fine-tuning is the best approach when a model needs to learn a specific domain-related task. It involves adjusting a pre-trained model with a smaller, task-specific dataset to improve performance in that domain. A limited amount of labeled data is available and more data is needed - Data augmentation Data augmentation helps in scenarios where labeled data is scarce by artificially increasing the size and variability of the dataset, improving model generalization. Only unlabeled data is available - Continued pre-training Continued pre-training allows an existing foundation model to be further trained on domain-specific, unlabeled data to adapt to new contexts without requiring labeled data.",
+    "sourcePage": 63,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 185,
+    "type": "hotspot",
+    "prompt": "A company needs to customize a base model that is hosted on Amazon Bedrock. Select the correct model customization method from the following list of company requirements. Each model customization method should be selected one or more times.",
+    "explanation": "",
+    "sourcePage": 74,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 188,
+    "type": "hotspot",
+    "prompt": "A company is designing a customer service chatbot by using a fine-tuned large language model (LLM). The company wants to ensure that the chatbot uses responsible AI characteristics. Select the correct responsible AI characteristic from the following list for each application design action. Each responsible AI characteristic should be selected one time or not at all.",
+    "explanation": "",
+    "sourcePage": 75,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 191,
+    "type": "hotspot",
+    "prompt": "A company wants to use Amazon SageMaker features for various use cases. Select the correct SageMaker feature from the following list for each use case. Each SageMaker feature should be selected one time or not at all.",
+    "explanation": "",
+    "sourcePage": 77,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 229,
+    "type": "hotspot",
+    "prompt": "A company is using Amazon SageMaker to develop AI models. Select the correct SageMaker feature or resource from the following list for each step in the AI model lifecycle workflow. Each SageMaker feature or resource should be selected one time or not at all.",
+    "explanation": "",
+    "sourcePage": 90,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 235,
+    "type": "hotspot",
+    "prompt": "A company wants to develop a solution that uses generative AI to create content for product advertisements, including sample images and slogans. Select the correct model type from the following list for each action. Each model type should be selected one time.",
+    "explanation": "Create high-quality images that are influenced by the generated slogans and product -> Diffusion model Create contextually relevant slogans based on the advertisement product -> Transformer-based model Ensure that company brand elements are properly placed in the images -> Object detection model Diffusion models are state-of-the-art for high-quality image generation. Transformer-based models excel at natural language processing, making them suitable for generating contextually relevant slogans. Object detection models are designed to identify and ensure correct placement of specific objects (e.g., brand elements) within images.",
+    "sourcePage": 93,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 245,
+    "type": "hotspot",
+    "prompt": "A company is developing an AI application to help the company approve or deny personal loans. The application must follow the principles of responsible AI. Select the correct responsible AI principle from the following list for each action. Select each responsible AI principle one time or not at all.",
+    "explanation": "Encrypt the application data, and isolate the application on a private network -> Privacy and security Evaluate how different population groups will be impacted -> Fairness Test the application with unexpected data to ensure the application will work in unique situations -> Robustness Protecting data and networks is part of privacy and security. Assessing impacts on different groups ensures fairness. Testing with unexpected data checks the application's robustness.",
+    "sourcePage": 97,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 257,
+    "type": "hotspot",
+    "prompt": "Select the correct AWS service or tool from the following list for each use case. Select each AWS service or tool one time or not at all.",
+    "explanation": "Apply human feedback across the ML lifecycle to improve the accuracy and relevancy of models. -> Amazon SageMaker Ground Truth Implement safeguards that align with responsible AI policies. -> Amazon Bedrock Guardrails Detect potential bias during data preparation and model training. -> Amazon SageMaker Clarify Amazon SageMaker Ground Truth is used for human-in-the-loop data labeling and model improvement. Amazon Bedrock Guardrails are designed to enforce responsible AI safeguards. Amazon SageMaker Clarify detects and helps mitigate bias during data preparation and model training.",
+    "sourcePage": 102,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 264,
+    "type": "hotspot",
+    "prompt": "A company uses ML techniques to build applications. Select the correct ML technique from the following list for each task. Select each ML technique one time.",
+    "explanation": "Analyze a text question to determine if the answer is correct -> Binary classification Analyze ecological factors to determine the number of species in a certain area -> Regression Analyze car attributes to determine the car model -> Multiclass classification Determining if an answer is correct is a yes/no (binary) decision. Predicting the number of species (a numeric value) is a regression task. Identifying a car model from attributes involves choosing from multiple possible classes, which is multiclass classification.",
+    "sourcePage": 106,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 267,
+    "type": "hotspot",
+    "prompt": "A company is building an AI solution by using Amazon SageMaker AI. The company wants to use SageMaker AI features to facilitate application development. Select the correct SageMaker AI feature from the following list for each use case. Select each feature one time.",
+    "explanation": "Determine the most suitable model to use for a business case -> Model Cards Prepare data through a low-code or no-code interface -> Data Wrangler Identify biases or imbalances in the data -> Clarify Model Cards help summarize and communicate model characteristics for selection. Data Wrangler provides a no-code/low-code interface for data preparation. Clarify is used to detect bias and imbalances in datasets and models.",
+    "sourcePage": 107,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 275,
+    "type": "hotspot",
+    "prompt": "An ecommerce company is developing a generative AI solution to create personalized product recommendations for its application users. The company wants to track how effectively the AI solution increases product sales and user engagement in the application. Select the correct business metric from the following list for each business goal. Each business metric should be selected one time.",
+    "explanation": "Measure how engaging the product recommendations are to users -> Click-through rate (CTR) Determine the effect of the AI solution on the total value of user purchases -> Average order value (AOV) Assess the AI solution's ability to encourage users to return to the platform -> Retention rate CTR reflects engagement with recommendations. AOV measures the impact on purchase value. Retention rate evaluates if users are returning due to the AI solution.",
+    "sourcePage": 111,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 280,
+    "type": "hotspot",
+    "prompt": "A company wants to improve multiple ML models. Select the correct technique from the following list of use cases. Each technique should be selected one time or not at all.",
+    "explanation": "Enhancing the capabilities of a large language model (LLM) by using external sources -> Retrieval Augmented Generation (RAG) Querying a model to generalize and make predictions on unseen tasks -> Zero-shot learning Querying a model with a limited amount of data for new tasks -> Few-shot learning RAG improves LLMs by incorporating information from external data sources at query time. Zero-shot learning allows a model to perform tasks it wasn't explicitly trained on, using generalization. Few-shot learning enables a model to handle new tasks with only a small number of examples.",
+    "sourcePage": 113,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 283,
+    "type": "hotspot",
+    "prompt": "Select the correct AI term from the following list for each statement. Each AI term should be selected one time.",
+    "explanation": "Simulates human problem-solving capabilities -> AI Applies data-driven learning techniques to make predictions -> ML Focuses on processing data through intricate neural networks -> Deep learning AI (Artificial Intelligence) is the broadest concept and includes simulating human-like reasoning and problem-solving. ML (Machine Learning) is a subset of AI focused on learning from data to make predictions or decisions. Deep learning is a subset of ML that uses neural networks with many layers to process complex data.",
+    "sourcePage": 115,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 291,
+    "type": "hotspot",
+    "prompt": "An AI practitioner is determining the appropriate data type for various use cases. Select the correct data type from the following list for each use case. Select each data type one time.",
+    "explanation": "Build a sentiment analysis model for social media posts -> Text data Train a self-driving car to recognize traffic signs -> Image data Optimize ad campaigns by using customer demographic data and purchase history -> Tabular data Forecast stock prices by using historical price data -> Time series data Sentiment analysis deals with text data from social media posts. Recognizing traffic signs requires processing image data. Optimizing ad campaigns uses structured (tabular) customer and purchase data. Stock price forecasting uses time series data, which captures trends over time.",
+    "sourcePage": 119,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 300,
+    "type": "hotspot",
+    "prompt": "A company is building a generative AI application and is reviewing foundation models (FMs). The company needs to consider multiple FM characteristics. Select the correct FM characteristic from the following list for each definition. Each FM characteristic should be selected one time.",
+    "explanation": "Amount of information that can fit in a single prompt -> Context windows Length of time it takes for a model to generate an output -> Latency Multiple users invoking an application endpoint simultaneously -> Concurrency Context windows determine how much information the model can process at once. Latency is the response time for generating output. Concurrency measures how many users or requests the endpoint can handle at the same time.",
+    "sourcePage": 123,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 309,
+    "type": "hotspot",
+    "prompt": "Select and order the steps from the following list to correctly describe the ML lifecycle for a new custom model. Select each step one time.",
+    "explanation": "",
+    "sourcePage": 127,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 311,
+    "type": "hotspot",
+    "prompt": "Select the correct prompt engineering technique from the following list for each description. Select each prompt engineering technique one time or not at all.",
+    "explanation": "Provide a small number of examples to the model to understand the desired task before generating outputs -> Few-shot prompting Prompt a model to break down the step-by-step process that the model took to arrive at a final answer -> Chain-of-thought prompting Prompt a model to perform a task without providing examples -> Zero-shot prompting Few-shot prompting uses a few examples to guide the model’s outputs. Chain-of-thought prompting asks the model to explain its reasoning step-by-step. Zero-shot prompting asks the model to perform a task without any examples.",
+    "sourcePage": 128,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 313,
+    "type": "hotspot",
+    "prompt": "A company periodically updates its product database by manually uploading digital product guides. The product guides contain text and images. The company wants to automate this task by using generative AI. Select and order the steps from the following list to automate the database update task by using generative AI. Select each step one time.",
+    "explanation": "",
+    "sourcePage": 130,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 328,
+    "type": "hotspot",
+    "prompt": "A company wants to build generative AI applications by using Amazon Bedrock. The company wants to minimize development effort. Select and order the model development techniques from the following list from the LEAST development effort to the MOST development effort. Each model development technique should be selected one time.",
+    "explanation": "1. Prompt engineering 2. Retrieval Augmented Generation (RAG) 3. Fine-tuning 4. Continued pre-training Prompt engineering requires minimal effort as it only involves designing effective prompts. RAG adds moderate effort by integrating retrieval mechanisms with the model. Fine-tuning requires labeled data and retraining, demanding more resources. Continued pre-training is the most effort-intensive because it involves large-scale training with unlabeled domain data.",
+    "sourcePage": 136,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 350,
+    "type": "hotspot",
+    "prompt": "A company wants to use ML to increase customer engagement and sales. The company has collected a large dataset that includes customer demographics, purchase history, browsing patterns, and product ratings. Select the correct ML approach from the following list for each use case. Select each ML approach one time.",
+    "explanation": "Customer lifetime value is a continuous numeric prediction representing expected revenue over time. The likelihood that a customer will stop using services is a binary outcome prediction. Grouping customers by similar behaviors and preferences requires identifying natural patterns without predefined labels.",
+    "sourcePage": 145,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 351,
+    "type": "hotspot",
+    "prompt": "A company wants to build a new ML solution. The company already has data. The company needs to understand the ML lifecycle before building the solution. Select and order the steps from the following list to correctly describe the ML lifecycle. Select each step one time.",
+    "explanation": "The ML lifecycle starts with preparing and cleaning the available data, followed by training the model on that data. The trained model is then evaluated to verify performance before being deployed into production for real-world use.",
+    "sourcePage": 146,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 366,
+    "type": "hotspot",
+    "prompt": "A company wants to customize a foundation model (FM). The company wants to understand the customization methods and data types that are available. Select the correct customization method from the following list for each description. Select each customization method one time.",
+    "explanation": "Fine-tuning uses labeled data to adapt a foundation model for improved performance on specific tasks. Continued pre-training uses large volumes of unlabeled domain-specific data to adapt a foundation model to a specific domain. Distillation transfers knowledge from a larger, more capable model into a smaller model while retaining performance characteristics.",
+    "sourcePage": 153,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 387,
+    "type": "hotspot",
+    "prompt": "A company is building an AI assistant application. The company must implement a core governance process for the application development project. The company must ensure that the application aligns with responsible AI practices. Select and order the steps from the following list to correctly describe the implementation of a core governance process for this use case. Select each step one time.",
+    "explanation": "Step 1: Determine governance goals, risks, and policies. Step 2: Put together a cross-functional AI governance group. Step 3: Set up model monitoring mechanisms. Governance starts by defining objectives, risks, and policies to establish direction. Then a cross-functional group is formed to enforce and operationalize governance. Finally, monitoring mechanisms are implemented to continuously ensure compliance and responsible AI behavior.",
+    "sourcePage": 162,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 403,
+    "type": "hotspot",
+    "prompt": "A company has multiple datasets that contain historical data. The company wants to use ML technologies to process each dataset. Select the correct ML technology from the following list for each dataset. Select each ML technology one time or not at all.",
+    "explanation": "Text-based customer reviews — Natural language processing (NLP) Images of animals labeled with species names — Computer vision Daily sales volumes for products — Time series forecasting Customer reviews are unstructured text, so NLP is the appropriate technology for analyzing and processing language data. Images labeled by species are a visual classification task, which is handled by computer vision. Daily sales volumes are sequential data over time, making time series forecasting the correct choice for identifying patterns and predicting future values.",
+    "sourcePage": 169,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 417,
+    "type": "hotspot",
+    "prompt": "An AI practitioner is using an Amazon Nova text model. The AI practitioner wants to apply prompt engineering techniques to ensure that prompts support an iterative refinement process. Select the correct prompt design component from the following list for each definition. Select each prompt design component one time.",
+    "explanation": "Specify the use case for the model — Task Define the persona the model should assume to meet the requirements effectively — Role Describe the tone, format, or structure that the model should follow — Response style Set clear metrics to evaluate whether the model output meets expectations — Success criteria Task defines what the model is being asked to do. Role sets the persona or perspective the model should adopt. Response style determines the tone, format, and structure of the output. Success criteria establish how to judge whether the response meets the intended requirements.",
+    "sourcePage": 175,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 442,
+    "type": "hotspot",
+    "prompt": "A company is using Amazon Bedrock AgentCore to build, deploy, and implement agents at scale. The company needs to identify which resources to use. Select the correct AgentCore resource from the following list for each description. Select each resource one time or not at all.",
+    "explanation": "Observability Code Interpreter Browser tool Amazon Bedrock AgentCore Observability is used to monitor agent behavior with dashboards and operational telemetry. AgentCore Code Interpreter enables agents to securely execute code in supported languages. AgentCore Browser tool provides a fast, secure, serverless browser runtime that agents can use to interact with websites and web applications.",
+    "sourcePage": 185,
+    "reviewStatus": "needs-image-reconstruction"
+  },
+  {
+    "id": 443,
+    "type": "hotspot",
+    "prompt": "A company wants to use Amazon Bedrock to create a knowledge base from existing documents. The documents include text, tables, and images. Select and order the steps from the following list to correctly describe how to convert data from the documents into a knowledge base by using an ingestion process in Amazon Bedrock. Select each step one time or not at all.",
+    "explanation": "Step 1: Parse the documents. Step 2: Divide the data into chunks. Step 3: Convert the chunks into vector embeddings. Step 4: Write the vector embeddings to the vector store. Amazon Bedrock knowledge base ingestion starts by parsing the source documents, including supported content such as text, tables, and images. The parsed data is then split into chunks, converted into vector embeddings, and stored in a vector store so the knowledge base can retrieve relevant content later during RAG-based responses.",
+    "sourcePage": 187,
+    "reviewStatus": "needs-image-reconstruction"
+  }
+]
