@@ -1,9 +1,9 @@
-const CACHE_NAME = "aif-c01-study-v2";
+const CACHE_NAME = "aif-c01-study-v4";
 const CORE_ASSETS = [
   "./",
   "./index.html",
   "./styles.css",
-  "./app.js",
+  "./app.js?v=4",
   "./manifest.webmanifest",
   "./icons/icon-192.png",
   "./icons/icon-512.png",

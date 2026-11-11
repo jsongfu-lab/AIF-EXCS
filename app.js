@@ -86,65 +86,32 @@
     });
   }
 
-  function getStats() {
-    const attempts = Object.values(state.attempts);
-    return {
-      attempted: attempts.length,
-      correct: attempts.filter((attempt) => attempt.correct).length,
-      wrong: state.wrongIds.length
-    };
-  }
-
   function renderHome() {
-    const stats = getStats();
-    const percentage = Math.round((stats.attempted / questions.length) * 100);
     app.innerHTML = `
-      <div class="workspace home-layout">
-        <section class="hero">
-          <h1>把 420 道题，练成判断力。</h1>
-          <p class="hero-copy">
-            题目来自 452 题 PDF。普通选择题已转成可交互练习；32 道图片型 HOTSPOT 题单独保留，避免错误结构化。
-          </p>
-          <div class="progress-track" aria-label="总进度 ${percentage}%">
-            <span style="width:${percentage}%"></span>
-          </div>
-          <p class="progress-caption">${stats.attempted} / ${questions.length} 已作答 · ${percentage}%</p>
+      <div class="workspace">
           <ol class="action-list">
             <li>
               <button class="action-row" type="button" data-action="practice" data-testid="start-practice">
                 <span class="index">01</span>
-                <span><strong>单题练习</strong><small>顺序作答，提交后立即看解析</small></span>
+                <strong>单题练习</strong>
                 <span class="arrow" aria-hidden="true">›</span>
               </button>
             </li>
             <li>
               <button class="action-row" type="button" data-action="quiz">
                 <span class="index">02</span>
-                <span><strong>随机测试</strong><small>自定题量，完成后查看成绩</small></span>
+                <strong>随机测试</strong>
                 <span class="arrow" aria-hidden="true">›</span>
               </button>
             </li>
             <li>
               <button class="action-row" type="button" data-action="wrong">
                 <span class="index">03</span>
-                <span><strong>错题回练</strong><small>${stats.wrong} 道题等待复习</small></span>
+                <strong>错题回练</strong>
                 <span class="arrow" aria-hidden="true">›</span>
               </button>
             </li>
           </ol>
-        </section>
-        <aside aria-label="学习概览">
-          <div class="stat-sheet">
-            <div class="stat"><strong>${questions.length}</strong><span>可交互题</span></div>
-            <div class="stat"><strong>${stats.attempted}</strong><span>已作答</span></div>
-            <div class="stat"><strong>${stats.correct}</strong><span>当前答对</span></div>
-            <div class="stat"><strong>${stats.wrong}</strong><span>错题</span></div>
-          </div>
-          <p class="dataset-note">
-            <strong>为什么不是 452 道？</strong><br>
-            原 PDF 有 32 道 HOTSPOT 图片交互题。参考 App 同样只纳入 420 道标准题；本原型保留了这些题的文本与页码，后续需重建图片控件。
-          </p>
-        </aside>
       </div>`;
   }
 
@@ -166,7 +133,7 @@
     app.innerHTML = `
       <div class="workspace">
         <header class="view-heading">
-          <div><h1>题目浏览</h1><p>${filtered.length} 道匹配题目</p></div>
+          <h1>题目浏览</h1>
         </header>
         <form class="toolbar" id="search-form">
           <label class="field" for="question-search">按题号或关键词查找
@@ -191,7 +158,7 @@
         </ol>
         <div class="question-actions">
           <button class="button button-secondary" type="button" data-page="${page - 1}" ${page <= 1 ? "disabled" : ""}>上一页</button>
-          <span class="progress-caption">第 ${page} / ${totalPages} 页</span>
+          <span class="progress-caption">第 ${page} 页</span>
           <button class="button button-secondary" type="button" data-page="${page + 1}" ${page >= totalPages ? "disabled" : ""}>下一页</button>
         </div>
       </div>`;
@@ -201,7 +168,6 @@
     question,
     origin,
     index = 0,
-    total = questions.length,
     submitted = false,
     selected = [],
     title = "单题练习"
@@ -256,7 +222,7 @@
           </article>
           <aside class="question-aside" aria-label="本题进度">
             <dl>
-              <div><dt>位置</dt><dd>${index + 1} / ${total}</dd></div>
+              <div><dt>位置</dt><dd>${index + 1}</dd></div>
               <div><dt>题型</dt><dd>${question.multiple ? "多选" : "单选"}</dd></div>
               <div><dt>错题本</dt><dd>${state.wrongIds.includes(question.id) ? "已收录" : "未收录"}</dd></div>
             </dl>
@@ -276,7 +242,6 @@
       question,
       origin: "practice",
       index,
-      total: questions.length,
       submitted: route.submitted,
       selected: route.selected || [],
       title: "单题练习"
@@ -289,7 +254,6 @@
       question,
       origin: route.origin || "browse",
       index: 0,
-      total: 1,
       submitted: route.submitted,
       selected: route.selected || [],
       title: route.origin === "wrong" ? "错题回练" : "题目浏览"
@@ -300,7 +264,7 @@
     app.innerHTML = `
       <div class="workspace">
         <header class="view-heading">
-          <div><h1>随机测试</h1><p>从 420 道标准题中不重复抽取</p></div>
+          <div><h1>随机测试</h1><p>随机抽题，题目不重复</p></div>
         </header>
         <form id="quiz-setup" class="setup">
           <h2>测试设置</h2>
@@ -327,7 +291,6 @@
       question: questionMap.get(id),
       origin: "quiz",
       index: quizSession.index,
-      total: quizSession.ids.length,
       submitted: quizSession.submitted,
       selected: quizSession.selected || [],
       title: "随机测试"
@@ -513,7 +476,6 @@
         if (quizSession.index >= quizSession.ids.length) {
           state.quizHistory.unshift({
             correct: quizSession.correct,
-            total: quizSession.ids.length,
             completedAt: new Date().toISOString()
           });
           state.quizHistory = state.quizHistory.slice(0, 10);
