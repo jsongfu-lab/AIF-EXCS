@@ -9,11 +9,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="AIF 题库">
     <meta name="description" content="AWS Certified AI Practitioner AIF-C01 离线练习题库">
-    <title>AIF-C01 练习台</title>
+    <title>AIF-C01 模考练习台</title>
     <link rel="manifest" href="./manifest.webmanifest">
     <link rel="apple-touch-icon" href="./icons/icon-192.png">
     <link rel="icon" href="./icons/icon-192.png">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css?v=14">
   </head>
   <body>
     <a class="skip-link" href="#app">跳到主要内容</a>
@@ -21,15 +21,20 @@
       <button class="brand" type="button" data-action="home" aria-label="返回首页">
         <span class="brand-mark" aria-hidden="true">AIF</span>
         <span>
-          <strong>AIF-C01 练习台</strong>
+          <strong>AIF-C01 模考练习台</strong>
           <small>AI Practitioner · 可交互练习</small>
         </span>
       </button>
       <div class="header-actions">
+        <div id="language-switch" class="language-switch" role="group" aria-label="题目语言" hidden>
+          <button type="button" data-language="zh" aria-pressed="false" disabled>中文</button>
+          <button type="button" data-language="en" aria-pressed="true" lang="en" disabled>English</button>
+        </div>
         <span id="network-state" class="network-state" aria-live="polite">检查网络…</span>
-        <button id="install-button" class="button button-quiet" type="button" hidden>安装</button>
+        <button id="install-button" class="button button-quiet" type="button" aria-haspopup="dialog">安装</button>
       </div>
     </header>
+    <p id="update-notice" class="update-notice" role="status" hidden>新版已准备好。做完当前练习或测试后，刷新页面即可更新。</p>
 
     <main id="app" tabindex="-1" aria-live="polite">
       <noscript>此题库需要启用 JavaScript。</noscript>
@@ -46,7 +51,26 @@
       <button type="button" data-action="wrong"><span aria-hidden="true">!</span>错题</button>
     </nav>
 
+    <dialog id="install-help" class="install-help" aria-labelledby="install-help-title">
+      <h2 id="install-help-title">安装与卸载</h2>
+      <p><strong>直接用网页</strong>：在浏览器打开网址就能刷题。首次联网加载并完成缓存后，网页也可离线使用。</p>
+      <p><strong>安装后使用</strong>：从主屏幕或应用图标打开，通常以独立窗口显示。答题记录保存在本机，安装不会自动同步记录。</p>
+      <h3>怎么安装</h3>
+      <p>若下方有「继续安装」，可点击进入浏览器确认。iPhone 可用 Safari 的「分享 → 添加到主屏幕」。电脑或安卓也可在浏览器菜单中查找安装选项。</p>
+      <h3>怎么卸载</h3>
+      <ul>
+        <li>iPhone：长按题库图标，选择「删除 App」或「删除书签」。</li>
+        <li>安卓：在「设置 → 应用」中找到题库，点「卸载」。</li>
+        <li>电脑 Chrome：在题库 App 的 ⋮ 菜单选择「卸载」。</li>
+        <li>Mac Safari：在 Finder 的个人「应用程序」文件夹中将题库 App 移到废纸篓。</li>
+      </ul>
+      <p>卸载后仍可访问原网址。要保留 Chrome 中的进度和错题，卸载时请勿勾选同时删除网站数据。</p>
+      <form method="dialog" class="question-actions">
+        <button class="button button-secondary" autofocus>关闭</button>
+        <button id="confirm-install" class="button button-primary" type="button" hidden>继续安装</button>
+      </form>
+    </dialog>
     <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
-    <script src="./app.js?v=4" defer></script>
+    <script src="./app.js?v=14" defer></script>
   </body>
 </html>

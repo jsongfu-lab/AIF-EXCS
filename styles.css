@@ -112,13 +112,62 @@ a:focus-visible {
 
 .brand strong,
 .brand small { display: block; }
-.brand strong { font-size: 1rem; line-height: 1.2; }
+.brand strong { font-size: 1.25rem; line-height: 1.2; }
 .brand small { margin-top: var(--s1); color: var(--muted-ink); font-size: 0.75rem; }
 
 .header-actions {
   display: flex;
   align-items: center;
   gap: var(--s3);
+}
+
+.install-help {
+  width: min(36rem, calc(100% - 2rem));
+  max-height: 85dvh;
+  padding: clamp(1rem, 4vw, 2rem);
+  border: 1px solid var(--rule);
+  border-radius: var(--s2);
+  background: var(--paper);
+  color: var(--ink);
+  overflow: auto;
+}
+
+.install-help::backdrop { background: rgb(0 0 0 / 45%); }
+.update-notice {
+  margin: 0;
+  padding: 0.55rem 1rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.875rem;
+}
+.install-help h2 { margin-top: 0; }
+.install-help li + li { margin-top: 0.4rem; }
+.install-help [hidden] { display: none; }
+
+.language-switch:not([hidden]) {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.language-switch button {
+  min-height: 2.75rem;
+  padding: 0 0.6rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--s1);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 0.85rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.language-switch button[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--surface);
+}
+
+@media (max-width: 520px) {
+  .masthead { flex-wrap: wrap; gap: var(--s2); }
 }
 
 .network-state {
@@ -271,6 +320,7 @@ a:focus-visible {
 }
 
 .view-heading h1 { font-size: clamp(1.8rem, 5vw, 3.5rem); }
+.view-heading .practice-heading { font-size: clamp(1.5rem, 4vw, 2.75rem); }
 .view-heading p { margin: 0; color: var(--muted-ink); }
 
 .toolbar {
